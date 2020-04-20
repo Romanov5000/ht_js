@@ -14,14 +14,14 @@ let data = [
     }
  ];
 
- function upperCaseOneSimbol (str) {
+function upperCaseOneSimbol (str) {
     let lower = str.toLowerCase()
     return lower[0].toUpperCase() + lower.slice(1);
 }
 
 let userfoundNames = [];
 
-let userSurname = prompt ('Введите вашу фамилию','');
+let userSurname = prompt ('Введите фамилию','');
 
     for ( let i = 0 ; i < data.length ; i++ ) {
          if ( upperCaseOneSimbol(userSurname) === data[i].lastName) {
