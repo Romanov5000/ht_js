@@ -3,17 +3,12 @@ function createRandom (){
 }
 
 let numberRandom = [
-    createRandom (),
-    createRandom (),
-    createRandom (),
-    createRandom (),
-    createRandom (),
-    createRandom (),
-    createRandom (),
-    createRandom (),
-    createRandom (),
-    createRandom (),
+  
 ];
+
+for ( let i = 10 ; i > numberRandom.length ; numberRandom.push(createRandom()) ){
+  
+}
 
     for ( let i = 0 ; i < numberRandom.length ; i++ ){
         if (numberRandom [i] % 10 === 0 ) {
