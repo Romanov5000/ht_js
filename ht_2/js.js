@@ -1,3 +1,5 @@
+let r ;
+
 let elem = document.getElementById("table");
 let data = [
     {
@@ -17,11 +19,11 @@ let data = [
 
 
 
+const btnNewUser = document.querySelector ('.btnNewUser');
+btnNewUser.addEventListener ('click' , newName );
 
-newName ('andrei','kovalov',55); // вызываем функцию доб. нового пользователя в таблицу.
-
-deleteName ( 'andrei' ); // Удаляет выбранного пользователя из таблицы.
-
+const deleteUser = document.querySelector ('.deleteUser');
+deleteUser.addEventListener ('click' , deleteName );
 
 let table = '<table><tr><td><h3>firstName</h3></td><td><h3>lastName</h3></td><td><h3>age</h3></td></tr>';
 
@@ -33,20 +35,33 @@ for ( let item of data ) {
 
 elem.innerHTML = table;
 
-function newName ( firstNameUser , lastNameUser ,  ageUser ) {
+
+
+function newName () {
+    let firstNameUser = prompt ('Введите имя');
+    let lastNameUser = prompt ('Введите фамилию');
+    let ageUser = prompt ('Введите возраст');
 
     data.push ({firstName: `${firstNameUser}`, lastName: `${lastNameUser}`, age: `${ageUser}`});
+    
 }
 
 
 
-function deleteName ( nameUser ) {
+
+function deleteName () {
+    nameUser = prompt ('Введите нужного пользователя');
+    
     for ( i = 0 ; i < data.length ; i++ ){
     if ( nameUser === data[i].firstName || nameUser === data[i].lastName ) {
         data.splice (data.indexOf(data[i]), 1);
-        
-        }
+        } 
     }
 }
+
+
+
+
+
 
 
