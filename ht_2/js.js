@@ -25,6 +25,9 @@ btnNewUser.addEventListener ('click' , newName );
 const deleteUser = document.querySelector ('.deleteUser');
 deleteUser.addEventListener ('click' , deleteName );
 
+const changeUser = document.querySelector ('.changeUser');
+changeUser.addEventListener ('click' , changeUserName );
+
 let table = '<table><tr><td><h3>firstName</h3></td><td><h3>lastName</h3></td><td><h3>age</h3></td></tr>';
 
 for ( let item of data ) {
@@ -59,6 +62,19 @@ function deleteName () {
     }
 }
 
+function changeUserName () {
+    oldUser = prompt ('Введите изменяемого пользователя');
+
+    changeUerFirstName = prompt ('Введите новое имя пользователя');
+    changeUerLastName = prompt ('Введите новое имя пользователя');
+    changeUerAge = prompt ('Введите новое имя пользователя');
+
+    for ( i = 0 ; i < data.length ; i++ ){
+        if ( oldUser === data[i].firstName || oldUser === data[i].lastName ) {
+            data.splice (data.indexOf(data[i]), 1 , {firstName: `${changeUerFirstName}`, lastName: `${changeUerLastName}`, age: `${changeUerAge}`} );
+            } 
+        }
+}
 
 
 
