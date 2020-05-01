@@ -42,9 +42,9 @@ for ( i = 0 ; i < data.length ; i++ ) {
 
 
 function addUser () {
-    let firstName = prompt ('введите имя');
-    let lastName = prompt ('введите имя');
-    let age = prompt ('введите имя');
+    let firstName = prompt ('введите имя пользователя');
+    let lastName = prompt ('введите фамилию пользователя');
+    let age = prompt ('введите возраст пользователя');
     
     let tr = document.createElement ('tr');
     tr.innerHTML = `<td>${firstName}</td><td>${lastName}</td><td>${age}</td>`;
