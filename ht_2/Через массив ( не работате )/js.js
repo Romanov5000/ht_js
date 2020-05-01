@@ -1,5 +1,3 @@
-let r ;
-
 let elem = document.getElementById("table");
 let data = [
     {
@@ -66,8 +64,8 @@ function changeUserName () {
     oldUser = prompt ('Введите изменяемого пользователя');
 
     changeUerFirstName = prompt ('Введите новое имя пользователя');
-    changeUerLastName = prompt ('Введите новое имя пользователя');
-    changeUerAge = prompt ('Введите новое имя пользователя');
+    changeUerLastName = prompt ('Введите новую фамилию пользователя');
+    changeUerAge = prompt ('Введите новый возраст пользователя');
 
     for ( i = 0 ; i < data.length ; i++ ){
         if ( oldUser === data[i].firstName || oldUser === data[i].lastName ) {
