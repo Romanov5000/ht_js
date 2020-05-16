@@ -23,21 +23,21 @@ function createTable(userAttr) {
     let usersBlock = document.querySelector('.users_block');
     usersBlock.append(table);
 }
-// ????????????????????????????????????????????????????????????????
+
 async function pastePeople(peoplePromise) {
     let people = await peoplePromise;
+    console.log(people);
     
 people.forEach ( (el) => {
-        for (let key in el){
-            if (key=== userAttr[0] || key === userAttr[1] || key === userAttr[2]) {
-                
-                let tr = document.createElement('tr');
-                let td = document.createElement('td');
-                tr.innerHTML = el[key];
-                console.log(el[key]);
-                table.append(tr);
-            }
+    let tr = document.createElement('tr');
+    for (item of userAttr){
         
+            let td = document.createElement('td');
+            td.innerHTML = el[item];
+            tr.append(td);
+            table.append(tr);
+            
+            table.append(tr);
   }
 }
 )}
@@ -47,4 +47,3 @@ console.log(pastePeople(getPeople()));
 
 
 createTable(userAttr);
-pastePeople(getPeople());
