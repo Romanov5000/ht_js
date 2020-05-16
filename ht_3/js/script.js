@@ -69,18 +69,25 @@ formAddUser.addEventListener('submit', (event) => {
     <td>${inputAgeValue}</td>`;
     addTdWithBtns(tr);
     tbody.append(tr);
-    
+   formAddUser.reset();
 });
 
 function changeUserName () {
  
-     changeUerFirstName = prompt ('Введите новое имя пользователя');
-     changeUerLastName = prompt ('Введите новую фамилию пользователя');
-     changeUerAge = prompt ('Введите новый возраст пользователя');
- 
-     let tr = this.closest('tr');
-     tr.innerHTML = `<td>${changeUerFirstName}</td><td>${changeUerLastName}</td><td>${+changeUerAge}</td>`;
-
-     addTdWithBtns(tr);
+    let tr = this.closest('tr');
+    let tdArr = tr.cells;
+    console.log(tdArr);
+    for(let i = 0; i < tdArr.length; i++) {
+        console.log(tdArr[i]);
+        if(tdArr[i].classList.contains('btns_td')) {
+            
+        } else {
+            tdValue = tdArr[i].innerHTML;
+            let input = document.createElement('input');
+            input.value = tdValue;
+            tdArr[i].innerHTML = '';
+            tdArr[i].append(input);
+        }
+    }
      
 }

@@ -1,6 +1,6 @@
 table {
     border-collapse: collapse;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
         & tbody tr:first-child td {
             font-weight: bold;
         }
@@ -16,7 +16,7 @@ td {
             background: #D8E6F3;
         }
         &.heading {
-            background-color: rgb(49, 52, 84);
+            background-color: #313454;
             color: white;
             border: none;  
         }
@@ -30,7 +30,6 @@ td {
     padding: 10px 10px;
 }
 
-
 form {
     display: flex;
     align-items: flex-end; 
@@ -38,11 +37,25 @@ form {
 }
 button {
     margin-left: 10px;
+    &:focus {
+        outline: none;
+    }
+    &.add_user {
+        border: none;
+        background-color: #313454;
+        color: white;
+        border-radius: 5px;
+        padding: 10px 15px;
+        transition: 1s;
+        &:hover {
+            background-color: #5c6281;
+        }
+    }
 }
 .inputs_block {
     display: flex;
     flex-direction: column;  
-    width: 30%;
+    width: 26%;
     
     & input:not(:last-child) {
         margin-bottom: 20px;
@@ -56,16 +69,18 @@ button {
         }
     }
 }
-
+input {
+    padding: 0px 0px 5px 5px;
+}
 .edit_user_btn , .delete_user_btn {
     border: none;
     background: none;
 }
 .fa {
-    transition: 1s;
+    transition: 0.3s;
     font-size: 18px;
         &:hover{
-            transform: scale(1.3);
+            transform: scale(1.1);
         }
 
 }
